@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+        <nav>
+            <a href="exercicios/teste.html">00 - Teste</a>    
+        </nav>
+        <section id="conteudo"></section>
+        <footer>
+            <br>
+            Curso de Web Moderno
+        </footer> 
+        <script>
+            document.querySelectorAll('a').forEach(link => { // Seleciona todos os elementos <a> (links) da página
+                link.onclick = function(e) {   // Para cada link encontrado, adiciona um evento de clique
+                    e.preventDefault() // Impede o comportamento padrão do link (que é recarregar a página)
+                    fetch(link.href) // Usa fetch para fazer uma requisição GET para o endereço do link
+                        .then(resp => resp.text()) // Quando a resposta chegar, transforma ela em texto
+                        .then(html => conteudo.innerHTML = html) // Quando o texto estiver disponível, coloca o HTML dentro do elemento com id "conteudo"
+                }
+            })
+        </script>
+    </body>
+</html>
