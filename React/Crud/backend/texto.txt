@@ -1,0 +1,15 @@
+BACKEND                                                       
+-> npm init -y: Cria um novo projeto Node com configurações padrão (`package.json`), Ele serve pra instalar bibliotecas (como o React, o json-server, etc).   |
+-> npm i --save json-server@0.13.0 -E: Instala a biblioteca `json-server` (versão 0.13.0) e salva no projeto. “Instala o json-server(é um servidor fake que simula uma API REST usando um arquivo .json.),  
+exatamente na versão 0.13.0, e salva essa dependência no package.json do meu projeto”. |
+
+No arquivo package.json
+    "start": "json-server --watch db.json --port 3001" Esse script inicia um servidor 
+    local que simula uma API REST, usando o arquivo db.json como fonte de dados. 
+    Ele estará acessível em http://localhost:3001. É útil para testar aplicações front-end 
+    sem precisar de um backend real.
+  
+-> Separou em duas aplicações: backend e froentend
+
+FROENTEND
+-> create-react-app name

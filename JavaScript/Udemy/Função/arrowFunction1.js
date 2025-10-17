@@ -10,8 +10,6 @@ dobro = (a) => {
 dobro = a => 2 * a; 
 console.log(dobro(Math.PI));
 
-
-
 // função normal
 let ola = function(){
     return 'Olá';
