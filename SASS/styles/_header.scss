@@ -1,0 +1,31 @@
+//Template só pra essa propriedade que eu quero, separando em pedaços menores
+//Posso separar os estilos em vários arquivos
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  @include flexCenter();
+  background: $primary;
+  color: white;
+  button {
+    background: $secundary;
+    &:hover {
+      background: darken($primary, 10%);
+    }
+    &::after {
+      content: "Teste";
+    }
+  }
+
+  p {
+    color: black;
+  }
+  h1 {
+    color: purple;
+  }
+}
